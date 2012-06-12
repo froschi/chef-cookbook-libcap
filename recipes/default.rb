@@ -2,6 +2,8 @@ packages = Array.new
 
 case node[:lsb][:codename]
 when "lucid"
+  include_recipe "libattr"
+
   packages |= %w/
     libcap2
   /
